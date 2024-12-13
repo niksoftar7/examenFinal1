@@ -44,20 +44,27 @@ public class AgenteManager {
 
     }
 
+    public void regresar(){
+        
+    }
+
+
+
     public void mostrarMenu() {
         boolean continuar = true;
+        menu menusi = new menu();
         while (continuar) {
             System.out.println("\n=== Menú Agentes ===");
             System.out.println("1. Registrar Agente");
             System.out.println("2. Mostrar Agentes");
-            System.out.println("3. Salir");
+            System.out.println("3. volver");
             int opcion = ConsoleUtils.leerEntero("Seleccione una opción: ");
             ConsoleUtils.limpiarBuffer(); // Consumir cualquier salto de línea residual
 
             switch (opcion) {
                 case 1 -> registrarAgente();
                 case 2 -> mostrarAgentes();
-                case 3 -> continuar = false;
+                case 3 -> menusi.menus();
                 default -> System.out.println("Opción no válida.");
             }
         }
