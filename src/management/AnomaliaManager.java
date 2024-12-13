@@ -31,9 +31,12 @@ public class AnomaliaManager {
             return;
         }
         System.out.println("=== Lista de Anomalías ===");
+        int contador = 0;
         for (Anomalia anomalia : anomalias) {
             System.out.println(anomalia);
+            contador ++;
         }
+        System.out.println("el numero total de anomalias es " + contador);
     }
 
     public void mostrarMenu() {

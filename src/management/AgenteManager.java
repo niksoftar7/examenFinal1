@@ -22,7 +22,9 @@ public class AgenteManager {
         Agente nuevoAgente = new Agente(id, nombre, habilidad);
         agentes.add(nuevoAgente);
         System.out.println("Agente registrado con éxito.");
+        
     }
+
 
     public void mostrarAgentes() {
         if (agentes.isEmpty()) {
@@ -30,9 +32,16 @@ public class AgenteManager {
             return;
         }
         System.out.println("=== Lista de Agentes ===");
+        int contador = 0;
+
         for (Agente agente : agentes) {
             System.out.println(agente);
+            contador += 1;
+  
         }
+        System.out.println("el numero total de agentes es "+ contador);
+
+
     }
 
     public void mostrarMenu() {
